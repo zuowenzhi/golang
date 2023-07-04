@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //定义全局变量
 var n1 = 100
 var n2 = 200
@@ -12,7 +14,12 @@ var (
 	name2 = "mary"
 )
 
+func demo() {
+	fmt.Println("自定义函数")
+}
+
 func main() {
+	demo()
 
 	//该案例演示golang如何一次性声明多个变量
 	//var n1, n2, n3 int
@@ -28,8 +35,8 @@ func main() {
 	//n1, name , n3 := 100, "tom~", 888
 	//fmt.Println("n1=",n1, "name=", name, "n3=", n3)
 
-	//输出全局变量
-	//fmt.Println("n1=",n1, "name=", name, "n2=", n2)
-	//fmt.Println("n3=", n3, "name2=", name2, "n4=", n4)
+	//输出全局变量 在函数外边生成的变量,就是全局变量,
+	fmt.Println("n1=", n1, "name=", name, "n2=", n2)
+	fmt.Println("n3=", n3, "name2=", name2, "n4=", n4)
 
 }
